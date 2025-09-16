@@ -57,7 +57,9 @@ def to_permutation_matrix(matches):
     #     for (u, v) in matches.items():
     #         P[u, v] = 1
     #
-    P[list(zip(*(matches.items())))] = 1
+
+    for (u,v) in matches.items():
+        P[u,v] =1 
     return P
 
 
@@ -179,6 +181,7 @@ def birkhoff_von_neumann_decomposition(D):
 
     """
     m, n = D.shape
+
     if m != n:
         raise ValueError('Input matrix must be square ({} x {})'.format(m, n))
     indices = list(itertools.product(range(m), range(n)))
