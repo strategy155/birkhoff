@@ -54,4 +54,4 @@ This is a reminder for the maintainer of this package.
 Contact
 -------
 
-Jeffrey Finkelstein <jeffrey.finkelstein@gmail.com>
+This is a fork of original package with small fixes!
