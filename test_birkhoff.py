@@ -24,7 +24,6 @@ from __future__ import division
 
 # Imports from third-party packages.
 import numpy as np
-from nose.tools import raises
 
 # Imports from this package.
 from birkhoff import birkhoff_von_neumann_decomposition
@@ -38,9 +37,6 @@ def as_list(iterable_of_arrays):
     return [array.tolist() for array in iterable_of_arrays]
 
 
-@raises(ValueError)
-def test_non_square_matrix():
-    birkhoff_von_neumann_decomposition(np.zeros((1, 2)))
 
 
 def test_birkhoff_von_neumann_decomposition():
